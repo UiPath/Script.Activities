@@ -38,6 +38,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConnectionDialog\ConnectionUIDialog\Microsoft.Data.ConnectionUI.Dialog.csproj" />
     <ProjectReference Include="..\UiPath.Database.Activities\UiPath.Database.Activities.csproj" />
     <ProjectReference Include="..\UiPath.Database\UiPath.Database.csproj" />
   </ItemGroup>

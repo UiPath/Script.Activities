@@ -1,0 +1,154 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net461;net5.0-windows</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ProjectGuid>{05C97F8D-B7CF-4CAB-B81C-0994A70D90CA}</ProjectGuid>
+    <RootNamespace>Microsoft.Data.ConnectionUI</RootNamespace>
+    <FileUpgradeFlags />
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AssemblyTitle>Microsoft.Data.ConnectionUI.Properties</AssemblyTitle>
+    <Product>Microsoft.Data.ConnectionUI.Properties</Product>
+    <Copyright>Copyright ©  2013</Copyright>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net5.0-windows' ">
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="AccessConnectionUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AccessConnectionUIControl.Designer.cs">
+      <DependentUpon>AccessConnectionUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="AddPropertyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AddPropertyDialog.Designer.cs">
+      <DependentUpon>AddPropertyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="DataConnectionAdvancedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DataConnectionAdvancedDialog.Designer.cs">
+      <DependentUpon>DataConnectionAdvancedDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="DataConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DataConnectionDialog.Designer.cs">
+      <DependentUpon>DataConnectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="DataConnectionSourceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DataConnectionSourceDialog.Designer.cs">
+      <DependentUpon>DataConnectionSourceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="OdbcConnectionUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="OdbcConnectionUIControl.Designer.cs">
+      <DependentUpon>OdbcConnectionUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="OleDBConnectionUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="OleDBConnectionUIControl.Designer.cs">
+      <DependentUpon>OleDBConnectionUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="OracleConnectionUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="OracleConnectionUIControl.Designer.cs">
+      <DependentUpon>OracleConnectionUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SqlConnectionUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SqlConnectionUIControl.Designer.cs">
+      <DependentUpon>SqlConnectionUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SqlExpressConnectionUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SqlExpressConnectionUIControl.Designer.cs">
+      <DependentUpon>SqlExpressConnectionUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="AccessConnectionUIControl.resx">
+      <DependentUpon>AccessConnectionUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AddPropertyDialog.resx">
+      <DependentUpon>AddPropertyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DataConnectionAdvancedDialog.resx">
+      <DependentUpon>DataConnectionAdvancedDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DataConnectionDialog.resx">
+      <DependentUpon>DataConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DataConnectionSourceDialog.resx">
+      <DependentUpon>DataConnectionSourceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="OdbcConnectionUIControl.resx">
+      <DependentUpon>OdbcConnectionUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="OleDBConnectionUIControl.resx">
+      <DependentUpon>OleDBConnectionUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="OracleConnectionUIControl.resx">
+      <DependentUpon>OracleConnectionUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SqlConnectionUIControl.resx">
+      <DependentUpon>SqlConnectionUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SqlExpressConnectionUIControl.resx">
+      <DependentUpon>SqlExpressConnectionUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="OracleConnectionProperties.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+    <PackageReference Include="System.Data.Odbc" Version="5.0.0" />
+    <PackageReference Include="System.Data.OleDb" Version="5.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+</Project>
