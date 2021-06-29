@@ -94,6 +94,10 @@
     <PackageReference Include="System.Data.Odbc" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.1" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0" />
+    <PackageReference Include="System.Data.OleDb" Version="5.0.0"/>
+  </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' != 'net5.0' ">
     <ProjectReference Include="..\..\Database\UiPath.Database.Activities.Design\UiPath.Database.Activities.Design.csproj">
       <PrivateAssets>All</PrivateAssets>
@@ -104,6 +108,7 @@
       <PrivateAssets>All</PrivateAssets>
     </ProjectReference>
   </ItemGroup>
+  
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition=" '$(TargetFramework)' == 'net461' AND $(ConfigurationName) == Debug ">
     <Exec Command="if exist &quot;$(ProjectDir)..\..\Output\Activities\Packages\UiPath.Database.*&quot; del &quot;$(ProjectDir)..\..\Output\Activities\Packages\UiPath.Database.*&quot;&#xD;&#xA;&#xD;&#xA;&quot;powershell.exe&quot; -file &quot;$(ProjectDir)..\..\Tools\net.sdk\pack-project.ps1&quot; -projectPath &quot;$(ProjectPath)&quot; -outputPath &quot;$(ProjectDir)..\..\Output\Activities\Packages&quot; -suffix &quot;dev&quot;" />
