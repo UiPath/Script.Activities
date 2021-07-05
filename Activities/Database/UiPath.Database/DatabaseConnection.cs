@@ -36,8 +36,10 @@ namespace UiPath.Database
         public DatabaseConnection Initialize(string connectionString, string providerName)
         {
             _providerName = providerName;
+
 #if NETCOREAPP
             DbProviderFactories.RegisterFactory("System.Data.SqlClient", Microsoft.Data.SqlClient.SqlClientFactory.Instance);
+            DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", Microsoft.Data.SqlClient.SqlClientFactory.Instance);
             DbProviderFactories.RegisterFactory("System.Data.OleDb", System.Data.OleDb.OleDbFactory.Instance);
             DbProviderFactories.RegisterFactory("System.Data.Odbc", System.Data.Odbc.OdbcFactory.Instance);
             DbProviderFactories.RegisterFactory("Oracle.ManagedDataAccess.Client", Oracle.ManagedDataAccess.Client.OracleClientFactory.Instance);
@@ -121,7 +123,7 @@ namespace UiPath.Database
 
         public virtual bool SupportsBulk()
         {
-            if (_connection is OracleConnection || _connection is SqlConnection)
+            if (_connection is OracleConnection || _connection.ToString().EndsWith(".SqlConnection")) //to cover both Microsoft.Data.SqlClient but also System.Data.SqlClient
                 return true;
             return false;
         }

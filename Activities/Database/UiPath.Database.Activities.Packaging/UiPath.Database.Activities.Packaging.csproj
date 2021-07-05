@@ -70,7 +70,11 @@
       <BuildOutputInPackage Include="$(OutputPath)tr\UiPath.Database.Activities.Design.resources.dll" TargetPath="tr\UiPath.Database.Activities.Design.resources.dll" />
       <BuildOutputInPackage Include="$(OutputPath)zh-CN\UiPath.Database.Activities.Design.resources.dll" TargetPath="zh-CN\UiPath.Database.Activities.Design.resources.dll" />
     </ItemGroup>
-    <ItemGroup Condition=" '$(TargetFramework)' != 'net5.0' ">
+    <ItemGroup Condition=" '$(TargetFramework)' != 'net461' ">
+      <BuildOutputInPackage Include="$(OutputPath)Microsoft.Data.SqlClient.SNI.dll" />
+    </ItemGroup>
+
+      <ItemGroup Condition=" '$(TargetFramework)' != 'net5.0' ">
       <BuildOutputInPackage Include="$(OutputPath)UiPath.Database.Activities.Design.dll" />
 
       <BuildOutputInPackage Include="$(OutputPath)fr\UiPath.Database.Activities.Design.resources.dll" TargetPath="fr\UiPath.Database.Activities.Design.resources.dll" />

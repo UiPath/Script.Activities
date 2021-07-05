@@ -17,7 +17,7 @@ namespace UiPath.Database.BulkOps
     {
         public static IBulkOperations Create(DbConnection connection)
         {
-            if (connection is Microsoft.Data.SqlClient.SqlConnection)
+            if (connection.ToString().EndsWith(".SqlConnection")) //to cover both Microsoft.Data.SqlClient but also System.Data.SqlClient
             {
                 return new SQLBulkOperations();
             }

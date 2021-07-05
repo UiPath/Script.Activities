@@ -13,8 +13,11 @@ namespace UiPath.Database.BulkOps
 
         public void WriteToServer(DataTable dataTable)
         {
+
+            var conn = new SqlConnection(Connection.ConnectionString);
+            conn.Open();
             // Set up the bulk copy object
-            using (SqlBulkCopy bulkCopy = new SqlBulkCopy((SqlConnection)Connection))
+            using (SqlBulkCopy bulkCopy = new SqlBulkCopy(conn))
             {
                 bulkCopy.DestinationTableName = TableName;
                 bulkCopy.WriteToServer(dataTable);
